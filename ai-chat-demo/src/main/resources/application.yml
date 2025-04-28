@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: chat-demo
+  ai:
+    openai:
+      base-url: http://127.0.0.1:11434
+      api-key: "_" ## using compatibility api
+      chat:
+        options:
+          model: mistral-small3.1:24b
+      embedding:
+        options:
+          model: nomic-embed-text:latest
+  http:
+    client:
+      factory: simple
+
+currency:
+  exchange:
+    api-url: https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+    org.zalando.logbook.Logbook: TRACE

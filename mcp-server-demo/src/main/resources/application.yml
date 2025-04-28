@@ -1,0 +1,12 @@
+server:
+  port: 18080
+
+spring:
+  application:
+    name: mcp-server-demo
+  ai:
+    mcp:
+      server:
+        name: demo-community-football-mcp-server
+        version: 1.0.0
+        type: sync

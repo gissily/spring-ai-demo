@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: ollama-demo
+  ai:
+    ollama:
+      chat:
+        model: mistral-small3.1:24b
+  http:
+    client:
+      factory: simple
+
+currency:
+  exchange:
+    api-url: https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/

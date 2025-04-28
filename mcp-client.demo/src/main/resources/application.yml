@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: mcp-client.demo
+  ai:
+    openai:
+      base-url: http://127.0.0.1:11434
+      api-key: "_" ## using compatibility api
+      chat:
+        options:
+          model: mistral-small3.1:24b
+      embedding:
+        options:
+          model: nomic-embed-text:latest
+    mcp:
+      client:
+        toolcallback:
+          enabled: true
+        name: spring-ai-mcp-client
+        version: 1.0.0
+        type: sync
+        sse:
+          connections:
+            community-football:
+              url: http://127.0.0.1:18080
+  http:
+    client:
+      factory: simple
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+    org.zalando.logbook.Logbook: TRACE

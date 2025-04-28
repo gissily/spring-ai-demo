@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Demo A Football Club",
+    "commonly": "Demo A FC",
+    "nickname": "DA FC",
+    "stadium": {
+      "name": "Big A stadium",
+      "location": "northeast of the community Demo",
+      "capacity": 5000
+    },
+    "info": "Demo A Football Club, commonly referred to as Demo A FC (often stylised as DA FC), is a football club based in Big A stadium located in the northeast of the community Demo."
+  },
+  {
+    "name": "Demo City Football Club",
+    "commonly": "Demo City",
+    "nickname": "Demo City",
+    "stadium": {
+      "name": "City stadium",
+      "location": "east of the community Demo",
+      "capacity": 8000
+    },
+    "info": "Demo City Football Club, commonly referred to as Demo City, is a football club based in City stadium located in the east of the community Demo."
+  },
+  {
+    "name": "Demo United Football Club",
+    "commonly": "Demo United",
+    "nickname": "Demo Utd",
+    "stadium": {
+      "name": "United stadium",
+      "location": "north of the community Demo",
+      "capacity": 10000
+    },
+    "info": "Demo United Football Club, commonly referred to as Demo United (often stylised as Demo Utd), is a football club based in United stadium located in the north of the community Demo."
+  },
+  {
+    "name": "Southeast Conner Football Club",
+    "commonly": "Southeast FC",
+    "nickname": "Southeast FC",
+    "stadium": {
+      "name": "Conner stadium",
+      "location": "southeast of the community Demo",
+      "capacity": 12000
+    },
+    "info": "Southeast Conner Football Club, commonly referred to as Southeast FC, is a football club based in Conner stadium located in the southeast of the community Demo."
+  },
+  {
+    "name": "South Mountain Football Club",
+    "commonly": "South Mountain",
+    "nickname": "South Mountain",
+    "stadium": {
+      "name": "Village stadium",
+      "location": "south of the community Demo",
+      "capacity": 2000
+    },
+    "info": "South Mountain Football Club, commonly referred to as South Mountain, is a football club based in Village stadium located in the south of the community Demo."
+  },
+  {
+    "name": "Demo Football Club",
+    "commonly": "DFC",
+    "nickname": "DFC",
+    "stadium": {
+      "name": "Community stadium",
+      "location": "center of the community Demo",
+      "capacity": 20000
+    },
+    "info": "Demo Football Club, commonly referred to as DFC, is a football club based in Community stadium located in the center of the community Demo."
+  },
+  {
+    "name": "Monsters Football Club",
+    "commonly": "Monsters",
+    "nickname": "Monsters",
+    "stadium": {
+      "name": "Community stadium",
+      "location": "center of the community Demo",
+      "capacity": 20000
+    },
+    "info": "Monsters Football Club, commonly referred to as Monsters, is a football club based in Community stadium located in the center of the community Demo."
+  },
+  {
+    "name": "Paradise United Football Club",
+    "commonly": "Paradise United",
+    "nickname": "Paradise Utd",
+    "stadium": {
+      "name": "Western Paradise stadium",
+      "location": "west of the community Demo",
+      "capacity": 15000
+    },
+    "info": "Paradise United Football Club, commonly referred to as Paradise United (often stylised as Paradise Utd), is a football club based in Western Paradise stadium located in the west of the community Demo."
+  },
+  {
+    "name": "Sunny Football Club",
+    "commonly": "Sunny FC",
+    "nickname": "Sunny FC",
+    "stadium": {
+      "name": "Sunny stadium",
+      "location": "south of the community Demo",
+      "capacity": 18000
+    },
+    "info": "Sunny Football Club, commonly referred to as Sunny FC, is a football club based in Sunny stadium located in the south of the community Demo."
+  },
+  {
+    "name": "Sunny United Football Club",
+    "commonly": "Sunny United",
+    "nickname": "Sunny Utd",
+    "stadium": {
+      "name": "Sunny stadium",
+      "location": "south of the community Demo",
+      "capacity": 18000
+    },
+    "info": "Sunny United Football Club, commonly referred to as Sunny United (often stylised as Sunny Utd), is a football club based in Sunny stadium located in the south of the community Demo."
+  }
+]

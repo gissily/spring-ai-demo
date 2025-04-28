@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: multiple-llms-demo
+  ai:
+    chat:
+      client:
+        enabled: false
+    openai:
+      base-url: http://127.0.0.1:11434
+      api-key: "_" ## using compatibility api
+      chat:
+        options:
+          model: mistral-small3.1:24b
+      embedding:
+        options:
+          model: nomic-embed-text:latest
+    ollama:
+      chat:
+        model: mistral-small3.1:24b
+  http:
+    client:
+      factory: simple
+

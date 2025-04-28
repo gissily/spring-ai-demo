@@ -1,0 +1,30 @@
+Top 10 clubs Info:
+Demo A Football Club, commonly referred to as Demo A FC (often stylised as DA FC), is a football club based in Big A stadium located in the northeast of the community Demo.
+Demo City Football Club, commonly referred to as Demo City, is a football club based in City stadium located in the east of the community Demo.
+Demo United Football Club, commonly referred to as Demo United (often stylised as Demo Utd), is a football club based in United stadium located in the north of the community Demo.
+Southeast Conner Football Club, commonly referred to as Southeast FC, is a football club based in Conner stadium located in the southeast of the community Demo.
+South Mountain Football Club, commonly referred to as South Mountain, is a football club based in Village stadium located in the south of the community Demo.
+Demo Football Club, commonly referred to as DFC, is a football club based in Community stadium located in the center of the community Demo.
+Monsters Football Club, commonly referred to as Monsters, is a football club based in Community stadium located in the center of the community Demo.
+Paradise United Football Club, commonly referred to as Paradise United (often stylised as Paradise Utd), is a football club based in Western Paradise stadium located in the west of the community Demo.
+Sunny Football Club, commonly referred to as Sunny FC, is a football club based in Sunny stadium located in the south of the community Demo.
+Sunny United Football Club, commonly referred to as Sunny United (often stylised as Sunny Utd), is a football club based in Sunny stadium located in the south of the community Demo.
+
+The Community stadium is the bigger stadium, it can accommodate 20k people; and the second is the Sunny stadium, and it also accommodate 18k people; the Village stadium is the smallest one, it only accommodate 2k people.
+The others are as follows, Western Paradise accommodate 15k people; Conner stadium accommodate 12k people; United stadium accommodate 10k people;  City stadium accommodate 8k people; Big A stadium accommodate 5k people.
+
+FAQ:
+Q: Which is the Biggest derby in the community?
+A: Monsters vs Paradise United.
+
+Q: Which team has won the most championships?
+A: Sunny United.
+
+Q: Which team is the richest?
+A: Paradise United.
+
+Q: Which team is popular in the community?
+A: DFC.
+
+Q: Which team has the most relegations?
+A: South Mountain.

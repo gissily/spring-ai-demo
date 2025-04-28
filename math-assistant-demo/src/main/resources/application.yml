@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: math-assistant-demo
+  ai:
+    openai:
+      base-url: http://127.0.0.1:11434
+      api-key: "_" ## using compatibility api
+      chat:
+        options:
+          model: mistral-small3.1:24b
+      embedding:
+        options:
+          model: nomic-embed-text:latest
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 768
+        max-document-batch-size: 10000
+        initialize-schema: false
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      mode: always
+  http:
+    client:
+      factory: simple
+  docker:
+    compose:
+      skip:
+        in-tests: false
+      stop:
+        command: down
+
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+    org.zalando.logbook.Logbook: TRACE
