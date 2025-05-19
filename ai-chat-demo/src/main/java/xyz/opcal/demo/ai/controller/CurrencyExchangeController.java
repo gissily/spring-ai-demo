@@ -35,7 +35,7 @@ public class CurrencyExchangeController {
 	public CurrencyExchangeController(ChatClient.Builder builder) {
 		this.chatClient = builder
 				.defaultAdvisors(new SimpleLoggerAdvisor())
-				.defaultTools("currencyExchangeRate")
+				.defaultToolNames("currencyExchangeRate")
 				.build();
 	}
 
@@ -49,6 +49,14 @@ public class CurrencyExchangeController {
 		var prompt = promptsTemplate.create(Map.of("from", from, "to", to, "total", total));
 		return chatClient
 				.prompt(prompt)
+				.call()
+				.content();
+	}
+
+	@GetMapping("/ex")
+	public String exchangeRate(@RequestParam String message) {
+		return chatClient
+				.prompt(message)
 				.call()
 				.content();
 	}

@@ -19,7 +19,7 @@ package xyz.opcal.demo.ai;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
-import org.springframework.ai.chat.memory.InMemoryChatMemory;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.boot.SpringApplication;
@@ -34,20 +34,22 @@ public class MultipleLLMsApplication {
 	}
 
 	@Bean("openAiChatClient")
-	ChatClient openAiChatClient(OpenAiChatModel model) {
+	ChatClient openAiChatClient(OpenAiChatModel model, ChatMemory chatMemory) {
 		return ChatClient
 				.builder(model)
-				.defaultAdvisors(new MessageChatMemoryAdvisor(new InMemoryChatMemory()),
-						new PromptChatMemoryAdvisor(new InMemoryChatMemory()))
+				.defaultAdvisors(
+						MessageChatMemoryAdvisor.builder(chatMemory).build(),
+						PromptChatMemoryAdvisor.builder(chatMemory).build())
 				.build();
 	}
 
 	@Bean("ollamaChatClient")
-	ChatClient ollamaChatClient(OllamaChatModel model) {
+	ChatClient ollamaChatClient(OllamaChatModel model, ChatMemory chatMemory) {
 		return ChatClient
 				.builder(model)
-				.defaultAdvisors(new MessageChatMemoryAdvisor(new InMemoryChatMemory()),
-						new PromptChatMemoryAdvisor(new InMemoryChatMemory()))
+				.defaultAdvisors(
+						MessageChatMemoryAdvisor.builder(chatMemory).build(),
+						PromptChatMemoryAdvisor.builder(chatMemory).build())
 				.build();
 	}
 

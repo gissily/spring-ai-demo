@@ -20,7 +20,7 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
-import org.springframework.ai.chat.memory.InMemoryChatMemory;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,11 +33,11 @@ public class FcCommunityFaqController {
 
 	private final ChatClient chatClient;
 
-	public FcCommunityFaqController(ChatClient.Builder builder, VectorStore vectorStore) {
+	public FcCommunityFaqController(ChatClient.Builder builder, VectorStore vectorStore, ChatMemory chatMemory) {
 		this.chatClient = builder
 				.defaultAdvisors(new SimpleLoggerAdvisor(),
-						new QuestionAnswerAdvisor(vectorStore),
-						new MessageChatMemoryAdvisor(new InMemoryChatMemory()))
+						QuestionAnswerAdvisor.builder(vectorStore).build(),
+						MessageChatMemoryAdvisor.builder(chatMemory).build())
 				.build();
 	}
 

@@ -22,7 +22,7 @@ import java.util.Map;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
-import org.springframework.ai.chat.memory.InMemoryChatMemory;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.SearchRequest;
@@ -44,11 +44,12 @@ public class MathAssistantController {
 	@Value("classpath:/prompts/math-reference.st")
 	private Resource mathPromptTemplate;
 
-	public MathAssistantController(ChatClient.Builder builder, VectorStore vectorStore) {
+	public MathAssistantController(ChatClient.Builder builder, VectorStore vectorStore, ChatMemory chatMemory) {
 		this.vectorStore = vectorStore;
 		this.chatClient = builder
-				.defaultAdvisors(new MessageChatMemoryAdvisor(new InMemoryChatMemory()),
-						new PromptChatMemoryAdvisor(new InMemoryChatMemory()))
+				.defaultAdvisors(
+						MessageChatMemoryAdvisor.builder(chatMemory).build(),
+						PromptChatMemoryAdvisor.builder(chatMemory).build())
 				.build();
 	}
 

@@ -17,10 +17,7 @@
 package xyz.opcal.demo.ai.controller;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
-import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
-import org.springframework.ai.chat.memory.InMemoryChatMemory;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +33,7 @@ public class FcCommunityController {
 	public FcCommunityController(ChatClient.Builder builder, ToolCallbackProvider callbackProvider) {
 		this.chatClient = builder
 				.defaultAdvisors(new SimpleLoggerAdvisor())
-				.defaultTools(callbackProvider)
+				.defaultToolCallbacks(callbackProvider)
 				.defaultSystem("You are the assistant about the Demo community football, and you need to initialize both football clubs and faq data first, then analyze them for each question")
 				.build();
 	}

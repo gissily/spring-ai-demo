@@ -19,7 +19,6 @@ package xyz.opcal.demo.ai.controller;
 import java.util.Map;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +33,7 @@ public class CurrencyExchangeController {
 
 	public CurrencyExchangeController(ChatClient.Builder builder) {
 		this.chatClient = builder
-				.defaultTools("currencyExchangeRate")
+				.defaultToolNames("currencyExchangeRate")
 				.build();
 	}
 
@@ -48,6 +47,14 @@ public class CurrencyExchangeController {
 		var prompt = promptsTemplate.create(Map.of("from", from, "to", to, "total", total));
 		return chatClient
 				.prompt(prompt)
+				.call()
+				.content();
+	}
+
+	@GetMapping("/ex")
+	public String exchangeRate(@RequestParam String message) {
+		return chatClient
+				.prompt(message)
 				.call()
 				.content();
 	}
