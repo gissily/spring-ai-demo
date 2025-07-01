@@ -33,11 +33,22 @@ public class TechTipsController {
 
 	public TechTipsController(ChatClient.Builder builder) {
 		this.chatClient = builder
-				.defaultSystem("Please respond to any questions about IT Tech Tips")
+				.defaultSystem("Please respond to any questions about IT Tech Tips, if it is not about IT tech please reject it")
 				.defaultAdvisors(new SimpleLoggerAdvisor())
 				.build();
 	}
 
+	@GetMapping("/tech")
+	public String techTips(@RequestParam String tech) {
+		var tipsTemplate = """
+				Please tell me a tips about {tech}
+				""";
+
+		return chatClient.prompt()
+				.user(spec -> spec.text(tipsTemplate).params(Map.of("tech", tech)))
+				.call()
+				.content();
+	}
 
 	@GetMapping("/java")
 	public String javaTips(@RequestParam(defaultValue = "Java") String tech) {
