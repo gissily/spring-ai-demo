@@ -1,0 +1,17 @@
+spring:
+  ai:
+    openai:
+      embedding:
+        options:
+          model: mxbai-embed-large:latest
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1024
+        max-document-batch-size: 10000
+        initialize-schema: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-mxbai.sql
