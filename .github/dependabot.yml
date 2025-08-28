@@ -1,15 +1,10 @@
 version: 2
 updates:
-  - package-ecosystem: maven
-    directories:
-      - "/"
-      - "/ai-chat-demo"
-      - "/math-assistant-demo"
-      - "/mcp-client.demo"
-      - "/mcp-server-demo"
-      - "/multiple-llms-demo"
-      - "/ollama-demo"
+  - package-ecosystem: "maven"
+    directory: "/"
     schedule:
       interval: "weekly"
       day: "thursday"
       time: "12:00"
+    labels:
+      - "maven"
