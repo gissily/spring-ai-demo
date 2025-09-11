@@ -35,7 +35,7 @@
     <properties>
         <java.version>24</java.version>
         <spring-ai.version>1.0.1</spring-ai.version>
-        <zalando-logbook.version>3.12.2</zalando-logbook.version>
+        <zalando-logbook.version>3.12.3</zalando-logbook.version>
     </properties>
 
     <modules>
